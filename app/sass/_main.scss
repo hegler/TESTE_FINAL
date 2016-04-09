@@ -27,6 +27,10 @@ a:hover {
         list-style: none;
         margin: 0;
         padding: 0;
+
+        &:last-child li:last-child a {
+            border-bottom: 0;
+        }
     }
 
     a {
@@ -62,10 +66,6 @@ a:hover {
             @include menu-item-icon("menu-item-sales", -40px, -84px);
             @include menu-item-icon("menu-item-shopping", -38px, -124px);
         }
-    }
-
-    li:last-child a {
-        border-bottom: 0;
     }
 }
 

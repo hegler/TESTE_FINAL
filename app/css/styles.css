@@ -8828,7 +8828,11 @@ a:hover {
   margin: 0;
   padding: 0;
 }
-/* line 32, ../sass/_main.scss */
+/* line 31, ../sass/_main.scss */
+.mainmenu ul:last-child li:last-child a {
+  border-bottom: 0;
+}
+/* line 36, ../sass/_main.scss */
 .mainmenu a {
   border-bottom: 1px solid #e3e3e3;
   border-left: 6px solid #f8f8f8;
@@ -8837,7 +8841,7 @@ a:hover {
   padding: 15px 5px 15px 15px;
   text-transform: uppercase;
 }
-/* line 40, ../sass/_main.scss */
+/* line 44, ../sass/_main.scss */
 .mainmenu a::before {
   background-image: url("../images/img-sprite.png");
   background-repeat: no-repeat;
@@ -8868,7 +8872,7 @@ a:hover {
 .mainmenu a.menu-item-expander::before {
   background-position: 0 -167px;
 }
-/* line 57, ../sass/_main.scss */
+/* line 61, ../sass/_main.scss */
 .mainmenu a:hover {
   border-left-color: #cc0000;
 }
@@ -8887,10 +8891,6 @@ a:hover {
 /* line 15, ../sass/_mixins.scss */
 .mainmenu a:hover.menu-item-shopping::before {
   background-position: -38px -124px;
-}
-/* line 67, ../sass/_main.scss */
-.mainmenu li:last-child a {
-  border-bottom: 0;
 }
 
 /* line 72, ../sass/_main.scss */

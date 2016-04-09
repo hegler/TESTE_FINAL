@@ -1,0 +1,94 @@
+//Messages page styles
+
+.glyphicon-search,
+.glyphicon-trash,
+.glyphicon-triangle-left,
+.glyphicon-triangle-right {
+    @include icon-shadow();
+}
+
+.messages {
+    input {
+        float: left;
+        margin-right: 5px;
+        margin-top: 30px;
+    }
+
+    .media {
+        background-color: #fbfbfb;
+        border-radius: 50px 8px 8px 50px;
+        display: block;
+        margin-top: 0;
+
+
+        .message:nth-child(even) & {
+            background-color: #f4f4f4;
+        }
+
+        .media-content {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .media-heading {
+            color: $brand-primary;
+
+            .message-date {
+                color: $text-color;
+            }
+
+            .message-bullet {
+                color: #6c6c6c;
+            }
+        }
+
+        .media-object {
+            height: 56px;
+            width: 56px;
+        }
+
+        .media-left, .media-body {
+            padding: 8px;
+        }
+
+        .media-left {
+        }
+
+        .media-body {
+            padding-left: 0;
+
+            > div {
+                border-left: 1px solid #e0e0e0;
+                padding-left: 8px;
+            }
+        }
+
+        .media-right {
+            background-color: #bdbdbd;
+            border-radius: 8px;
+            padding-left: 0;
+
+            .badge {
+                background-color: #bdbdbd;
+                font-size: 12px;
+                font-weight: normal;
+                margin-left: -10px;
+            }
+        }
+
+        &:hover {
+            .media-content {
+                color: #373737;
+            }
+
+            .media-right {
+                background-color: $brand-primary;
+
+                .badge {
+                    background-color: $brand-primary;
+                }
+            }
+        }
+    }
+}
+

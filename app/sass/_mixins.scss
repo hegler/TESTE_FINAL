@@ -1,0 +1,19 @@
+//Mixins of Application
+
+/**
+ * Add a shadow on icons
+ */
+@mixin icon-shadow() {
+    text-shadow: 1px 1px 0px darken($brand-primary, 5%);
+}
+
+/**
+ * Position imgs of sprite
+ */
+@mixin menu-item-icon($className, $pX, $pY) {
+    &.#{$className} {
+        &::before {
+            background-position: $pX $pY;
+        }
+    }
+}

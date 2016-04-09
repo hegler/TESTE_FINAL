@@ -1,0 +1,127 @@
+// General styles
+
+a:hover {
+    text-decoration: none;
+}
+
+.mainmenu {
+    background-color: #f8f8f8;
+    border: 1px solid #e3e3e3;
+    width: 220px;
+
+    .logo {
+        background: $brand-primary url("../images/img-sprite.png") -71px 45px no-repeat;
+        height: 135px;
+        margin: 0;
+    }
+
+    h3 {
+        border-bottom: 1px solid #e3e3e3;
+        border-left: 18px solid #e3e3e3;
+        font-size: inherit;
+        margin: 0;
+        padding: 35px 10px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        border-bottom: 1px solid #e3e3e3;
+        border-left: 6px solid #f8f8f8;
+        border-top: 1px solid #fff;
+        display: block;
+        padding: 15px 5px 15px 15px;
+        text-transform: uppercase;
+
+        &::before {
+            background-image: url("../images/img-sprite.png");
+            background-repeat: no-repeat;
+            content: "";
+            display: inline-block;
+            height: 21px;
+            margin-right: 10px;
+            vertical-align: middle;
+            width: 25px;
+        }
+
+        @include menu-item-icon("menu-item-market", -2px, 0);
+        @include menu-item-icon("menu-item-product", -2px, -40px);
+        @include menu-item-icon("menu-item-sales", -2px, -84px);
+        @include menu-item-icon("menu-item-shopping", 0, -124px);
+        @include menu-item-icon("menu-item-expander", 0, -167px);
+
+        &:hover {
+            border-left-color: $brand-primary;
+
+            @include menu-item-icon("menu-item-market", -40px, 0);
+            @include menu-item-icon("menu-item-product", -40px, -40px);
+            @include menu-item-icon("menu-item-sales", -40px, -84px);
+            @include menu-item-icon("menu-item-shopping", -38px, -124px);
+        }
+    }
+
+    li:last-child a {
+        border-bottom: 0;
+    }
+}
+
+.page-header {
+    border: 1px solid $gray-lighter;
+    margin: 0 0 30px;
+    padding: 0;
+    line-height: 50px;
+
+    &::before {
+        background: $brand-primary url("../images/img-letter.png") center center no-repeat;
+        content: " ";
+        display: block;
+        float: left;
+        height: 50px;
+        margin-right: 15px;
+        width: 50px;
+    }
+
+    h1 {
+        color: #373737;
+        font-size: 1.286em;
+        margin: 0;
+        line-height: 50px;
+    }
+}
+
+.search {
+    margin-bottom: 20px;
+
+    .form-control {
+        background-color: #f0f0f0;
+        color: #6c6c6c;
+        font-size: 0.857em;
+        text-align: right;
+    }
+
+    .separator-left {
+        border-left: 1px solid $gray-lighter;
+    }
+}
+
+.pager {
+    .btn-previous, .btn-next {
+        background-color: $brand-primary;
+        border: 0;
+        border-radius: 4px;
+        color: #fff;
+        line-height: 30px;
+
+        &:hover {
+            background-color: darken($brand-primary, 5%) ;
+        }
+    }
+}
+
+
+
+

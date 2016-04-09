@@ -1,0 +1,17 @@
+//Overwrite some vars of Bootstrap
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Open Sans Regular", Helvetica, Arial, sans-serif;
+$brand-primary: #cc0000;
+$text-color: #ababab;
+$link-color: #cfcece;
+$link-hover-color: $brand-primary;
+$input-border-focus: $brand-primary;
+
+//Import bootstrap
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Import app style
+@import "mixins";
+@import "main";
+@import "messages";

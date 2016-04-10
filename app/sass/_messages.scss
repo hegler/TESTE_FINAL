@@ -1,17 +1,24 @@
 //Messages page styles
 
-.glyphicon-search,
-.glyphicon-trash,
-.glyphicon-triangle-left,
-.glyphicon-triangle-right {
-    @include icon-shadow();
-}
-
 .messages {
-    input {
+    .list-group-item:first-child {
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+
+        &:last-child {
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+    }
+
+    input[type="checkbox"] {
         float: left;
         margin-right: 5px;
         margin-top: 30px;
+    }
+
+    .message:nth-child(even) .media {
+        background-color: #f4f4f4;
     }
 
     .media {
@@ -19,11 +26,6 @@
         border-radius: 50px 8px 8px 50px;
         display: block;
         margin-top: 0;
-
-
-        .message:nth-child(even) & {
-            background-color: #f4f4f4;
-        }
 
         .media-content {
             font-size: 16px;
@@ -49,9 +51,6 @@
 
         .media-left, .media-body {
             padding: 8px;
-        }
-
-        .media-left {
         }
 
         .media-body {

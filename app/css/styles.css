@@ -8802,19 +8802,36 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 7, ../sass/_main.scss */
+@media (min-width: 1200px) {
+  /* line 8, ../sass/_main.scss */
+  .mainmenu {
+    float: left;
+    width: 220px;
+  }
+
+  /* line 12, ../sass/_main.scss */
+  #content {
+    float: right;
+    width: 900px;
+  }
+}
+/* line 18, ../sass/_main.scss */
+.container {
+  padding: 0;
+}
+
+/* line 22, ../sass/_main.scss */
 .mainmenu {
   background-color: #f8f8f8;
   border: 1px solid #e3e3e3;
-  width: 220px;
 }
-/* line 12, ../sass/_main.scss */
+/* line 26, ../sass/_main.scss */
 .mainmenu .logo {
   background: #cc0000 url("../images/img-sprite.png") -71px 45px no-repeat;
   height: 135px;
   margin: 0;
 }
-/* line 18, ../sass/_main.scss */
+/* line 32, ../sass/_main.scss */
 .mainmenu h3 {
   border-bottom: 1px solid #e3e3e3;
   border-left: 18px solid #e3e3e3;
@@ -8822,17 +8839,17 @@ a:hover {
   margin: 0;
   padding: 35px 10px;
 }
-/* line 26, ../sass/_main.scss */
+/* line 40, ../sass/_main.scss */
 .mainmenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 31, ../sass/_main.scss */
+/* line 45, ../sass/_main.scss */
 .mainmenu ul:last-child li:last-child a {
   border-bottom: 0;
 }
-/* line 36, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 .mainmenu a {
   border-bottom: 1px solid #e3e3e3;
   border-left: 6px solid #f8f8f8;
@@ -8841,7 +8858,7 @@ a:hover {
   padding: 15px 5px 15px 15px;
   text-transform: uppercase;
 }
-/* line 44, ../sass/_main.scss */
+/* line 58, ../sass/_main.scss */
 .mainmenu a::before {
   background-image: url("../images/img-sprite.png");
   background-repeat: no-repeat;
@@ -8872,7 +8889,7 @@ a:hover {
 .mainmenu a.menu-item-expander::before {
   background-position: 0 -167px;
 }
-/* line 61, ../sass/_main.scss */
+/* line 75, ../sass/_main.scss */
 .mainmenu a:hover {
   border-left-color: #cc0000;
 }
@@ -8893,14 +8910,14 @@ a:hover {
   background-position: -38px -124px;
 }
 
-/* line 72, ../sass/_main.scss */
+/* line 86, ../sass/_main.scss */
 .page-header {
   border: 1px solid #eeeeee;
   margin: 0 0 30px;
   padding: 0;
   line-height: 50px;
 }
-/* line 78, ../sass/_main.scss */
+/* line 92, ../sass/_main.scss */
 .page-header::before {
   background: #cc0000 url("../images/img-letter.png") center center no-repeat;
   content: " ";
@@ -8910,7 +8927,7 @@ a:hover {
   margin-right: 15px;
   width: 50px;
 }
-/* line 88, ../sass/_main.scss */
+/* line 102, ../sass/_main.scss */
 .page-header h1 {
   color: #373737;
   font-size: 1.286em;
@@ -8918,23 +8935,40 @@ a:hover {
   line-height: 50px;
 }
 
-/* line 96, ../sass/_main.scss */
-.search {
+/* line 110, ../sass/_main.scss */
+.search-control {
   margin-bottom: 20px;
 }
-/* line 99, ../sass/_main.scss */
-.search .form-control {
+/* line 113, ../sass/_main.scss */
+.search-control .input-group {
+  width: 200px;
+}
+/* line 117, ../sass/_main.scss */
+.search-control .form-control {
   background-color: #f0f0f0;
+  border-radius: 2px 0 0 2px;
+  border-width: 0;
   color: #6c6c6c;
   font-size: 0.857em;
   text-align: right;
 }
-/* line 106, ../sass/_main.scss */
-.search .separator-left {
+/* line 126, ../sass/_main.scss */
+.search-control .input-group-addon {
+  background-color: #cc0000;
+  border-radius: 0 2px 2px 0;
+  border-width: 0;
+  color: #fff;
+}
+/* line 133, ../sass/_main.scss */
+.search-control .divider-left {
   border-left: 1px solid #eeeeee;
 }
+/* line 137, ../sass/_main.scss */
+.search-control .btn-remove {
+  border-radius: 2px;
+}
 
-/* line 112, ../sass/_main.scss */
+/* line 144, ../sass/_main.scss */
 .pager .btn-previous, .pager .btn-next {
   background-color: #cc0000;
   border: 0;
@@ -8942,12 +8976,12 @@ a:hover {
   color: #fff;
   line-height: 30px;
 }
-/* line 119, ../sass/_main.scss */
+/* line 151, ../sass/_main.scss */
 .pager .btn-previous:hover, .pager .btn-next:hover {
   background-color: #b30000;
 }
 
-/* line 3, ../sass/_messages.scss */
+/* line 157, ../sass/_main.scss */
 .glyphicon-search,
 .glyphicon-trash,
 .glyphicon-triangle-left,
@@ -8955,80 +8989,90 @@ a:hover {
   text-shadow: 1px 1px 0px #b30000;
 }
 
-/* line 11, ../sass/_messages.scss */
-.messages input {
+/* line 4, ../sass/_messages.scss */
+.messages .list-group-item:first-child {
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+/* line 8, ../sass/_messages.scss */
+.messages .list-group-item:first-child:last-child {
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+/* line 14, ../sass/_messages.scss */
+.messages input[type="checkbox"] {
   float: left;
   margin-right: 5px;
   margin-top: 30px;
 }
-/* line 17, ../sass/_messages.scss */
+/* line 20, ../sass/_messages.scss */
+.messages .message:nth-child(even) .media {
+  background-color: #f4f4f4;
+}
+/* line 24, ../sass/_messages.scss */
 .messages .media {
   background-color: #fbfbfb;
   border-radius: 50px 8px 8px 50px;
   display: block;
   margin-top: 0;
 }
-/* line 24, ../sass/_messages.scss */
-.message:nth-child(even) .messages .media {
-  background-color: #f4f4f4;
-}
-/* line 28, ../sass/_messages.scss */
+/* line 30, ../sass/_messages.scss */
 .messages .media .media-content {
   font-size: 16px;
   margin: 0;
 }
-/* line 33, ../sass/_messages.scss */
+/* line 35, ../sass/_messages.scss */
 .messages .media .media-heading {
   color: #cc0000;
 }
-/* line 36, ../sass/_messages.scss */
+/* line 38, ../sass/_messages.scss */
 .messages .media .media-heading .message-date {
   color: #ababab;
 }
-/* line 40, ../sass/_messages.scss */
+/* line 42, ../sass/_messages.scss */
 .messages .media .media-heading .message-bullet {
   color: #6c6c6c;
 }
-/* line 45, ../sass/_messages.scss */
+/* line 47, ../sass/_messages.scss */
 .messages .media .media-object {
   height: 56px;
   width: 56px;
 }
-/* line 50, ../sass/_messages.scss */
+/* line 52, ../sass/_messages.scss */
 .messages .media .media-left, .messages .media .media-body {
   padding: 8px;
 }
-/* line 57, ../sass/_messages.scss */
+/* line 56, ../sass/_messages.scss */
 .messages .media .media-body {
   padding-left: 0;
 }
-/* line 60, ../sass/_messages.scss */
+/* line 59, ../sass/_messages.scss */
 .messages .media .media-body > div {
   border-left: 1px solid #e0e0e0;
   padding-left: 8px;
 }
-/* line 66, ../sass/_messages.scss */
+/* line 65, ../sass/_messages.scss */
 .messages .media .media-right {
   background-color: #bdbdbd;
   border-radius: 8px;
   padding-left: 0;
 }
-/* line 71, ../sass/_messages.scss */
+/* line 70, ../sass/_messages.scss */
 .messages .media .media-right .badge {
   background-color: #bdbdbd;
   font-size: 12px;
   font-weight: normal;
   margin-left: -10px;
 }
-/* line 80, ../sass/_messages.scss */
+/* line 79, ../sass/_messages.scss */
 .messages .media:hover .media-content {
   color: #373737;
 }
-/* line 84, ../sass/_messages.scss */
+/* line 83, ../sass/_messages.scss */
 .messages .media:hover .media-right {
   background-color: #cc0000;
 }
-/* line 87, ../sass/_messages.scss */
+/* line 86, ../sass/_messages.scss */
 .messages .media:hover .media-right .badge {
   background-color: #cc0000;
 }

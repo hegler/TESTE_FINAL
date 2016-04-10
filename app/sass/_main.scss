@@ -4,10 +4,24 @@ a:hover {
     text-decoration: none;
 }
 
+@media (min-width: 1200px) {
+    .mainmenu {
+        float: left;
+        width: 220px;
+    }
+    #content {
+        float: right;
+        width: 900px;
+    }
+}
+
+.container {
+    padding: 0;
+}
+
 .mainmenu {
     background-color: #f8f8f8;
     border: 1px solid #e3e3e3;
-    width: 220px;
 
     .logo {
         background: $brand-primary url("../images/img-sprite.png") -71px 45px no-repeat;
@@ -93,19 +107,37 @@ a:hover {
     }
 }
 
-.search {
+.search-control {
     margin-bottom: 20px;
+
+    .input-group {
+        width: 200px;
+    }
 
     .form-control {
         background-color: #f0f0f0;
+        border-radius: 2px 0 0 2px;
+        border-width: 0;
         color: #6c6c6c;
         font-size: 0.857em;
         text-align: right;
     }
 
-    .separator-left {
+    .input-group-addon {
+        background-color: $brand-primary;
+        border-radius: 0 2px 2px 0;
+        border-width: 0;
+        color: #fff;
+    }
+
+    .divider-left {
         border-left: 1px solid $gray-lighter;
     }
+
+    .btn-remove {
+        border-radius: 2px;
+    }
+
 }
 
 .pager {
@@ -120,6 +152,13 @@ a:hover {
             background-color: darken($brand-primary, 5%) ;
         }
     }
+}
+
+.glyphicon-search,
+.glyphicon-trash,
+.glyphicon-triangle-left,
+.glyphicon-triangle-right {
+    @include icon-shadow();
 }
 
 

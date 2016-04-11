@@ -76,6 +76,7 @@
                         </div>
                     </section>
                     <section class="messages">
+                        <div class="alert alert-warning hide" role="alert">A pesquisa não retornou nenhum resultado.</div>
                         <ul class="list-group list">
                             <li class="list-group-item message">
                                 <input type="checkbox" name="message">
@@ -204,22 +205,22 @@
                                 </a>
                             </li>
                         </ul>
+                        <!-- Pagination -->
+                        <nav>
+                            <ul class="pager">
+                                <li>
+                                    <a href="#" title="Anterior" class="btn-previous" aria-label="Anterior">
+                                        <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Próximo" class="btn-next" aria-label="Próximo">
+                                        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </section>
-                    <!-- Pagination -->
-                    <nav>
-                        <ul class="pager">
-                            <li>
-                                <a href="#" title="Anterior" class="btn-previous" aria-label="Anterior">
-                                    <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="Próximo" class="btn-next" aria-label="Próximo">
-                                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
                 </main>
                 <footer>
                     <p class="text-center">&copy; Hotmart 2016</p>
@@ -229,7 +230,7 @@
 
         <!-- import scripts -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/list.js/dist/list.js"></script>
+        <script src="bower_components/list.js/dist/list.min.js"></script>
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
     </body>

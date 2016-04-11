@@ -13,7 +13,7 @@
         // create a new instance of component
         return new List('content', options);
     }
-    
+
     // load List plugin
     var list = loadList();
 
@@ -24,5 +24,19 @@
         $('.list input:checked').each(function() {
             list.remove('media-heading', $(this).parent().find('.media-heading').html());
         });
+    });
+
+    // add alert message when search didn't find results
+    list.on('searchComplete', function (obj) {
+        var alertMsg = $('.messages .alert'),
+            pager = $('.messages .pager');
+
+        if ( !obj.matchingItems.length ) {
+            alertMsg.removeClass('hide');
+            pager.hide();
+        } else {
+            alertMsg.addClass('hide');
+            pager.show();
+        }
     });
 })(jQuery, List);

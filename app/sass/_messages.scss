@@ -17,8 +17,12 @@
         margin-top: 30px;
     }
 
-    .message:nth-child(even) .media {
-        background-color: #f4f4f4;
+    .message {
+        transition: visibility 0s, opacity 0.5s linear;
+
+        &:nth-child(even) .media {
+            background-color: #f4f4f4;
+        }
     }
 
     .media {

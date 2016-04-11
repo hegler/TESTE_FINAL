@@ -8821,17 +8821,96 @@ a:hover {
 }
 
 /* line 22, ../sass/_main.scss */
+.page-header {
+  border: 1px solid #eeeeee;
+  margin: 0 0 30px;
+  padding: 0;
+  line-height: 50px;
+}
+/* line 28, ../sass/_main.scss */
+.page-header::before {
+  background: #cc0000 url("../images/img-letter.png") center center no-repeat;
+  content: " ";
+  display: block;
+  float: left;
+  height: 50px;
+  margin-right: 15px;
+  width: 50px;
+}
+/* line 38, ../sass/_main.scss */
+.page-header h1 {
+  color: #373737;
+  font-size: 1.286em;
+  margin: 0;
+  line-height: 50px;
+}
+
+/* line 46, ../sass/_main.scss */
+.search-control {
+  margin-bottom: 20px;
+}
+/* line 49, ../sass/_main.scss */
+.search-control .input-group {
+  width: 200px;
+}
+/* line 53, ../sass/_main.scss */
+.search-control .form-control {
+  background-color: #f0f0f0;
+  border-radius: 2px 0 0 2px;
+  border-width: 0;
+  color: #6c6c6c;
+  font-size: 0.857em;
+  text-align: right;
+}
+/* line 62, ../sass/_main.scss */
+.search-control .input-group-addon {
+  background-color: #cc0000;
+  border-radius: 0 2px 2px 0;
+  border-width: 0;
+  color: #fff;
+}
+/* line 69, ../sass/_main.scss */
+.search-control .divider-left {
+  border-left: 1px solid #eeeeee;
+}
+/* line 73, ../sass/_main.scss */
+.search-control .btn-remove {
+  border-radius: 2px;
+}
+
+/* line 80, ../sass/_main.scss */
+.pager .btn-previous, .pager .btn-next {
+  background-color: #cc0000;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 30px;
+}
+/* line 87, ../sass/_main.scss */
+.pager .btn-previous:hover, .pager .btn-next:hover {
+  background-color: #b30000;
+}
+
+/* line 93, ../sass/_main.scss */
+.glyphicon-search,
+.glyphicon-trash,
+.glyphicon-triangle-left,
+.glyphicon-triangle-right {
+  text-shadow: 1px 1px 0px #b30000;
+}
+
+/* line 3, ../sass/_menu.scss */
 .mainmenu {
   background-color: #f8f8f8;
   border: 1px solid #e3e3e3;
 }
-/* line 26, ../sass/_main.scss */
+/* line 7, ../sass/_menu.scss */
 .mainmenu .logo {
   background: #cc0000 url("../images/img-sprite.png") -71px 45px no-repeat;
   height: 135px;
   margin: 0;
 }
-/* line 32, ../sass/_main.scss */
+/* line 13, ../sass/_menu.scss */
 .mainmenu h3 {
   border-bottom: 1px solid #e3e3e3;
   border-left: 18px solid #e3e3e3;
@@ -8839,26 +8918,26 @@ a:hover {
   margin: 0;
   padding: 35px 10px;
 }
-/* line 40, ../sass/_main.scss */
+/* line 21, ../sass/_menu.scss */
 .mainmenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 45, ../sass/_main.scss */
+/* line 26, ../sass/_menu.scss */
 .mainmenu ul:last-child li:last-child a {
   border-bottom: 0;
 }
-/* line 50, ../sass/_main.scss */
+/* line 31, ../sass/_menu.scss */
 .mainmenu a {
   border-bottom: 1px solid #e3e3e3;
   border-left: 6px solid #f8f8f8;
   border-top: 1px solid #fff;
   display: block;
-  padding: 15px 5px 15px 15px;
+  padding: 15px 8px 12px 15px;
   text-transform: uppercase;
 }
-/* line 58, ../sass/_main.scss */
+/* line 39, ../sass/_menu.scss */
 .mainmenu a::before {
   background-image: url("../images/img-sprite.png");
   background-repeat: no-repeat;
@@ -8868,6 +8947,15 @@ a:hover {
   margin-right: 10px;
   vertical-align: middle;
   width: 25px;
+}
+/* line 50, ../sass/_menu.scss */
+.mainmenu a::after {
+  content: "\e258";
+  display: inline-block;
+  float: right;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.714em;
+  margin-top: 2px;
 }
 /* line 15, ../sass/_mixins.scss */
 .mainmenu a.menu-item-market::before {
@@ -8889,7 +8977,7 @@ a:hover {
 .mainmenu a.menu-item-expander::before {
   background-position: 0 -167px;
 }
-/* line 75, ../sass/_main.scss */
+/* line 65, ../sass/_menu.scss */
 .mainmenu a:hover {
   border-left-color: #cc0000;
 }
@@ -8910,85 +8998,6 @@ a:hover {
   background-position: -38px -124px;
 }
 
-/* line 86, ../sass/_main.scss */
-.page-header {
-  border: 1px solid #eeeeee;
-  margin: 0 0 30px;
-  padding: 0;
-  line-height: 50px;
-}
-/* line 92, ../sass/_main.scss */
-.page-header::before {
-  background: #cc0000 url("../images/img-letter.png") center center no-repeat;
-  content: " ";
-  display: block;
-  float: left;
-  height: 50px;
-  margin-right: 15px;
-  width: 50px;
-}
-/* line 102, ../sass/_main.scss */
-.page-header h1 {
-  color: #373737;
-  font-size: 1.286em;
-  margin: 0;
-  line-height: 50px;
-}
-
-/* line 110, ../sass/_main.scss */
-.search-control {
-  margin-bottom: 20px;
-}
-/* line 113, ../sass/_main.scss */
-.search-control .input-group {
-  width: 200px;
-}
-/* line 117, ../sass/_main.scss */
-.search-control .form-control {
-  background-color: #f0f0f0;
-  border-radius: 2px 0 0 2px;
-  border-width: 0;
-  color: #6c6c6c;
-  font-size: 0.857em;
-  text-align: right;
-}
-/* line 126, ../sass/_main.scss */
-.search-control .input-group-addon {
-  background-color: #cc0000;
-  border-radius: 0 2px 2px 0;
-  border-width: 0;
-  color: #fff;
-}
-/* line 133, ../sass/_main.scss */
-.search-control .divider-left {
-  border-left: 1px solid #eeeeee;
-}
-/* line 137, ../sass/_main.scss */
-.search-control .btn-remove {
-  border-radius: 2px;
-}
-
-/* line 144, ../sass/_main.scss */
-.pager .btn-previous, .pager .btn-next {
-  background-color: #cc0000;
-  border: 0;
-  border-radius: 4px;
-  color: #fff;
-  line-height: 30px;
-}
-/* line 151, ../sass/_main.scss */
-.pager .btn-previous:hover, .pager .btn-next:hover {
-  background-color: #b30000;
-}
-
-/* line 157, ../sass/_main.scss */
-.glyphicon-search,
-.glyphicon-trash,
-.glyphicon-triangle-left,
-.glyphicon-triangle-right {
-  text-shadow: 1px 1px 0px #b30000;
-}
-
 /* line 4, ../sass/_messages.scss */
 .messages .list-group-item:first-child {
   border-top-right-radius: 2px;
@@ -9006,73 +9015,77 @@ a:hover {
   margin-top: 30px;
 }
 /* line 20, ../sass/_messages.scss */
+.messages .message {
+  transition: visibility 0s, opacity 0.5s linear;
+}
+/* line 23, ../sass/_messages.scss */
 .messages .message:nth-child(even) .media {
   background-color: #f4f4f4;
 }
-/* line 24, ../sass/_messages.scss */
+/* line 28, ../sass/_messages.scss */
 .messages .media {
   background-color: #fbfbfb;
   border-radius: 50px 8px 8px 50px;
   display: block;
   margin-top: 0;
 }
-/* line 30, ../sass/_messages.scss */
+/* line 34, ../sass/_messages.scss */
 .messages .media .media-content {
   font-size: 16px;
   margin: 0;
 }
-/* line 35, ../sass/_messages.scss */
+/* line 39, ../sass/_messages.scss */
 .messages .media .media-heading {
   color: #cc0000;
 }
-/* line 38, ../sass/_messages.scss */
+/* line 42, ../sass/_messages.scss */
 .messages .media .media-heading .message-date {
   color: #ababab;
 }
-/* line 42, ../sass/_messages.scss */
+/* line 46, ../sass/_messages.scss */
 .messages .media .media-heading .message-bullet {
   color: #6c6c6c;
 }
-/* line 47, ../sass/_messages.scss */
+/* line 51, ../sass/_messages.scss */
 .messages .media .media-object {
   height: 56px;
   width: 56px;
 }
-/* line 52, ../sass/_messages.scss */
+/* line 56, ../sass/_messages.scss */
 .messages .media .media-left, .messages .media .media-body {
   padding: 8px;
 }
-/* line 56, ../sass/_messages.scss */
+/* line 60, ../sass/_messages.scss */
 .messages .media .media-body {
   padding-left: 0;
 }
-/* line 59, ../sass/_messages.scss */
+/* line 63, ../sass/_messages.scss */
 .messages .media .media-body > div {
   border-left: 1px solid #e0e0e0;
   padding-left: 8px;
 }
-/* line 65, ../sass/_messages.scss */
+/* line 69, ../sass/_messages.scss */
 .messages .media .media-right {
   background-color: #bdbdbd;
   border-radius: 8px;
   padding-left: 0;
 }
-/* line 70, ../sass/_messages.scss */
+/* line 74, ../sass/_messages.scss */
 .messages .media .media-right .badge {
   background-color: #bdbdbd;
   font-size: 12px;
   font-weight: normal;
   margin-left: -10px;
 }
-/* line 79, ../sass/_messages.scss */
+/* line 83, ../sass/_messages.scss */
 .messages .media:hover .media-content {
   color: #373737;
 }
-/* line 83, ../sass/_messages.scss */
+/* line 87, ../sass/_messages.scss */
 .messages .media:hover .media-right {
   background-color: #cc0000;
 }
-/* line 86, ../sass/_messages.scss */
+/* line 90, ../sass/_messages.scss */
 .messages .media:hover .media-right .badge {
   background-color: #cc0000;
 }
